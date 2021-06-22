@@ -22,4 +22,30 @@ function ready() {
         let button = addToCartButtons[i];
         input.addEventListener('change', addToCartClicked);
     };
+
+    document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked);
+}
+
+function purchaseClicked() {
+
+}
+
+function removeCartItem() {
+
+}
+
+function quantityChanged() {
+
+}
+
+function addToCartClicked() {
+
+}
+
+function addItemToCard() {
+
+}
+
+function updateCartTotal() {
+    
 }
