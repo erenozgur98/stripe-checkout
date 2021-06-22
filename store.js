@@ -30,22 +30,22 @@ function purchaseClicked() {
 
 }
 
-function removeCartItem() {
+function removeCartItem(e) {
 
 }
 
-function quantityChanged() {
+function quantityChanged(e) {
 
 }
 
-function addToCartClicked() {
+function addToCartClicked(e) {
 
 }
 
-function addItemToCard() {
+function addItemToCard(title, price, imageSrc) {
 
 }
 
 function updateCartTotal() {
-    
+
 }
