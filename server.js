@@ -18,6 +18,7 @@ app.get('/store', function(req, res) {
             res.status(500).end();
         } else {
             res.render('store.ejs', {
+                publicKey: publicKey,
                 items: JSON.parse(data)
             });
         }
