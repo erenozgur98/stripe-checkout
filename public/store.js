@@ -38,7 +38,19 @@ let stripeHandler = StripeCheckout.configure({
             let quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0];
             let quantity = quantityElement.value;
             let id = cartRow.dataset.itemId;
+            items.push({
+                id: id,
+                quantity: quantity
+            });
         }
+
+        fetch('/purchase', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+            }
+        })
     }
 })
 
