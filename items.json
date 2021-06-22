@@ -1,0 +1,28 @@
+{
+    "office": [
+        {
+            "id": 1,
+            "name": "Office Lego Set",
+            "price": 1299,
+            "imgName": "office-lego.png"
+        },
+        {
+            "id": 2,
+            "name": "Dunder Mifflin Shoes",
+            "price": 1499,
+            "imgName": "mifflin-shoes.png"
+        },
+        {
+            "id": 3,
+            "name": "Michael Scott Word",
+            "price": 999,
+            "imgName": "michael-word.png"
+        },
+        {
+            "id": 4,
+            "name": "Scott's Tots",
+            "price": 1999,
+            "imgName": "scotts-tots.png"
+        }
+    ]
+}
