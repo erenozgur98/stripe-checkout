@@ -23,6 +23,18 @@
             "name": "Scott's Tots",
             "price": 1999,
             "imgName": "scotts-tots.png"
+        },
+        {
+            "id": 5,
+            "name": "Dwight Shopping Bag",
+            "price": 1999,
+            "imgName": "dwight-bag.png"
+        },
+        {
+            "id": 6,
+            "name": "Dunder Mifflin T-Shirt",
+            "price": 699,
+            "imgName": "mifflin-tshirt.png"
         }
     ]
 }
