@@ -4,6 +4,7 @@ if (document.readtState == 'loading') {
     ready()
 }
 
+
 function ready() {
     let removeCartItemButtons = document.getElementsByClassName('btn-danger');
     for (let i = 0; i < removeCartItemButtons.length; i++) {
@@ -31,7 +32,9 @@ function purchaseClicked() {
 }
 
 function removeCartItem(e) {
-
+    let buttonClicked = e.target;
+    buttonClicked.parentElement.parentElement.remove();
+    updateCartTotal();
 }
 
 function quantityChanged(e) {
@@ -47,5 +50,14 @@ function addItemToCard(title, price, imageSrc) {
 }
 
 function updateCartTotal() {
+    let cartItemContainer = document.getElementsByClassName('cart-items')[0];
+    let cartRows = cartItemContainer.getElementsByClassName('cart-row')
+
+    for (let i = 0; i< cartRows.length; i++) {
+        let cartRow = cartRows[i];
+        let priceElement = cartRow.getElementsByClassName('cart-price')[0];
+        let quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0];
+        console.log(priceElement, quantityElement)
+    }
 
 }

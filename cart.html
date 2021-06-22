@@ -8,6 +8,7 @@
     <link rel='stylesheet' href='./style.css' />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="./store.js" async></script>
     <title>Your Cart</title>
 </head>
 
@@ -29,6 +30,17 @@
             <span class="cart-quantity cart-header cart-column">QUANTITY</span>
         </div>
         <div class="cart-items">
+            <div class="cart-row">
+                <div class="cart-item cart-row">
+                    <img src="./images/zZWPbRSw.png" alt="picture" class="cart-item-image">
+                    <span class="cart-item-title">Dwight Schrute Shopping Bag</span>
+                </div>
+                <span class="cart-price cart-column">$19.99</span>
+                <div class="cart-quantity cart-column">
+                    <input type="number" class="cart-quantity-input" value='1'>
+                    <button class="btn btn-danger" type='button'>REMOVE</button>
+                </div>
+            </div>
         </div>
         <div class="cart-total">
             <strong class="cart-total-title">Total</strong>
