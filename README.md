@@ -1,1 +1,5 @@
 # stripe-checkout
+
+## Credits
+
+WDS
