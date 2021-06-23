@@ -28,32 +28,33 @@ app.get('/store', function(req, res) {
 });
 
 app.post('/purchase', function(req, res) {
-    fs.readFile('items.json', function(err, data) {
-        if (err) {
-            res.status(500).end();
-        } else {
-            const itemsJson = JSON.parse(data);
-            let total = 0; 
-            req.body.items.forEach(function(item) {
-                const itemJson = itemsJson.find(function(i) {
-                    return i.id == item.id;
-                })
-                total = total + itemJson.price * item.quantity
-            });
-
-            stripe.charges.create({
-                amount: total,
-                source: req.body.stripeTokenId,
-                currency: 'usd'
-            }).then(function() {
-                console.log('Charge Successful');
-                res.json({ message: 'Successfully purchased items' });
-            }).catch(function() {
-                console.log('Charge Fail');
-                res.status(500).end();
-            })
-        }
+    fs.readFile('items.json', function(error, data) {
+      if (error) {
+        res.status(500).end()
+      } else {
+        const itemsJson = JSON.parse(data)
+        const itemsArray = itemsJson.office.concat(itemsJson.office)
+        let total = 0
+        req.body.items.forEach(function(item) {
+          const itemJson = itemsArray.find(function(i) {
+            return i.id == item.id
+          })
+          total = total + itemJson.price * item.quantity
+        })
+  
+        stripe.charges.create({
+          amount: total,
+          source: req.body.stripeTokenId,
+          currency: 'usd'
+        }).then(function() {
+          console.log('Charge Successful')
+          res.json({ message: 'Successfully purchased items' })
+        }).catch(function() {
+          console.log('Charge Fail')
+          res.status(500).end()
+        })
+      }
     })
-});
+  })
 
 app.listen(3000);
